@@ -18,10 +18,7 @@ const createImageNode = () => {
 
     return container;
 }
-// const nuevaImagen = createImageNode();
 const mountNode = document.getElementById('images')
-
-// mountNode.append(nuevaImagen);
 
 const addButton = document.querySelector('button')
 const getImage = () => {

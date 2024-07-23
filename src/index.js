@@ -1,3 +1,4 @@
+// const { doc } = require("prettier");
 
 const minimun = 1;
 const maximun = 122;
@@ -8,15 +9,26 @@ const createImageNode = () => {
     container.className = 'p-4';
 
 
-    const image = document.createElement('img')
-    image.className = 'mx-auto';
-    image.width = '320';
-    image.src = `https://randomfox.ca/images/${randon()}.jpg`; //todo
-    container.appendChild(image)
+    const imagen = document.createElement('img')
+    imagen.className = 'mx-auto';
+    imagen.width = '320';
+    imagen.src = `https://randomfox.ca/images/${randon()}.jpg`; //todo
+
+    container.appendChild(imagen)
 
     return container;
 }
-const nuevaImagen = createImageNode();
+// const nuevaImagen = createImageNode();
 const mountNode = document.getElementById('images')
-mountNode.appendChild(nuevaImagen)
- 
+
+// mountNode.append(nuevaImagen);
+
+const addButton = document.querySelector('button')
+const getImage = () => {
+    console.log('hey');
+    const newImge = createImageNode();
+    mountNode.append(newImge)
+}
+addButton.addEventListener('click', getImage);
+
+

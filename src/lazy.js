@@ -1,10 +1,13 @@
 
 const isIntersecting = (entry) => {
-	return FileSystemEntry.isIntersecting
+	return entry.isIntersecting
 }
 
-const accion = () => {
+const accion = (entry) => {
+	const nodo = entry.target;
 	console.log('interceptando');
+
+	observer.unobserve(nodo);
 }
 
 
@@ -16,5 +19,5 @@ const observer = new IntersectionObserver((entries) => {
 
 
 export const registerIgame = (imagen) => {
-	observer.observer(imagen)
+	observer.observe(imagen)
 }

@@ -26,6 +26,7 @@ const addButton = document.querySelector('button')
 const getImage = () => {
     const newImge = createImageNode();
     mountNode.append(newImge)
+    registerIgame(newImge)
     
 }
 addButton.addEventListener('click', getImage);

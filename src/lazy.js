@@ -3,18 +3,21 @@ const isIntersecting = (entry) => {
 	return entry.isIntersecting
 }
 
-const accion = (entry) => {
-	const nodo = entry.target;
-	console.log('interceptando');
+const loadImage = (entry) => {
+	const container = entry.target;
+	const image = container.firstChild;
+	const url = image.dataset.src;
 
-	observer.unobserve(nodo);
+	image.src = url;
+
+	observer.unobserve(container);
 }
 
 
 const observer = new IntersectionObserver((entries) => {
 	entries
 		.filter(isIntersecting)
-		.forEach(accion)
+		.forEach(loadImage)
 })
 
 

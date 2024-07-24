@@ -2,3 +2,5 @@
 2.Imagenes HTML -> JS
 2.1imagenes aleatorias
 3.Eventos - DOM 
+4.Intersection Ocserver
+5.Aplicar el lazy loading

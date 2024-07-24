@@ -1,4 +1,6 @@
-// const { doc } = require("prettier");
+import { registerIgame } from './lazy';
+
+
 
 const minimun = 1;
 const maximun = 122;
@@ -22,9 +24,9 @@ const mountNode = document.getElementById('images')
 
 const addButton = document.querySelector('button')
 const getImage = () => {
-    console.log('hey');
     const newImge = createImageNode();
     mountNode.append(newImge)
+    
 }
 addButton.addEventListener('click', getImage);
 
